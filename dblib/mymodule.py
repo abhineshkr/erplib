@@ -1,4 +1,4 @@
-# mylibrary/mymodule.py
+# dblib/mymodule.py
 
 def hello_world():
     return "Hello, Abhinesh! Nice To Meet You"
