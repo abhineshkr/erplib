@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='erplib',
-    version='0.1.10',
+    version='0.1.11',
     packages=find_packages(),
     install_requires=[
         'fastapi',
         'sqlalchemy',
         'psycopg2-binary',
         'alembic',
-        'pydantic'
+        'pydantic-settings'
     ],
     url='https://github.com/abhineshkr/erplib',
     author='Your Name',
