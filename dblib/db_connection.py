@@ -5,8 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.pool import QueuePool
 from .config import settings
 
-#print(settings.)
-DATABASE_URL = f"postgresql://{settings.PRIMARY_POSTGRES_USER}:{settings.PRIMARY_POSTGRES_PASSWORD}@{settings.PRIMARY_POSTGRES_HOST}:{settings.PRIMARY_POSTGRES_PORT}/{settings.PRIMARY_POSTGRES_DB}"
+print({settings.PRIMARY_POSTGRES_PORT})
+DATABASE_URL = f"postgresql://{settings.PRIMARY_POSTGRES_USER}:{settings.PRIMARY_POSTGRES_PASSWORD}@{settings.PRIMARY_POSTGRES_HOST}:15432/{settings.PRIMARY_POSTGRES_DB}"
 print(DATABASE_URL)
 
 engine = create_engine(
