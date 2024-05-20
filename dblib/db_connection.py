@@ -6,18 +6,18 @@ from sqlalchemy.pool import QueuePool
 from .config import settings
 
 
-print({settings.PRIMARY_POSTGRES_PORT})
-DATABASE_URL = f"postgresql://{settings.PRIMARY_POSTGRES_USER}:{settings.PRIMARY_POSTGRES_PASSWORD}@{settings.PRIMARY_POSTGRES_HOST}:{settings.PRIMARY_POSTGRES_PORT}/{settings.PRIMARY_POSTGRES_DB}"
+print({settings.ERPLIB_PRIMARY_POSTGRES_PORT})
+DATABASE_URL = f"postgresql://{settings.ERPLIB_PRIMARY_POSTGRES_USER}:{settings.ERPLIB_PRIMARY_POSTGRES_PASSWORD}@{settings.ERPLIB_PRIMARY_POSTGRES_HOST}:{settings.ERPLIB_PRIMARY_POSTGRES_PORT}/{settings.ERPLIB_PRIMARY_POSTGRES_DB}"
 print(DATABASE_URL)
 
 engine = create_engine(
     DATABASE_URL,
     poolclass=QueuePool,
-    pool_size=settings.POOL_MIN_SIZE,
-    max_overflow=settings.POOL_MAX_OVERFLOW,
-    pool_timeout=settings.POOL_IDLE_TIMEOUT,
-    pool_recycle=settings.POOL_RECYCLE,
-    pool_pre_ping=settings.POOL_PRE_PING
+    pool_size=settings.ERPLIB_POOL_MIN_SIZE,
+    max_overflow=settings.ERPLIB_POOL_MAX_OVERFLOW,
+    pool_timeout=settings.ERPLIB_POOL_IDLE_TIMEOUT,
+    pool_recycle=settings.ERPLIB_POOL_RECYCLE,
+    pool_pre_ping=settings.ERPLIB_POOL_PRE_PING
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
