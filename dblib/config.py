@@ -9,7 +9,7 @@ class Settings:
     PRIMARY_POSTGRES_USER: str = os.getenv('PRIMARY_POSTGRES_USER', 'postgres')
     PRIMARY_POSTGRES_PASSWORD: str = os.getenv('PRIMARY_POSTGRES_PASSWORD', 'epps%40123')
     PRIMARY_POSTGRES_HOST: str = os.getenv('PRIMARY_POSTGRES_HOST', 'localhost')
-    PRIMARY_POSTGRES_PORT: int = int(os.getenv('PRIMARY_POSTGRES_PORT', 5432))
+    PRIMARY_POSTGRES_PORT: int = int(os.getenv('PRIMARY_POSTGRES_PORT', 15432))
 
     POOL_MIN_SIZE: int = int(os.getenv('POOL_MIN_SIZE', 5))
     POOL_MAX_SIZE: int = int(os.getenv('POOL_MAX_SIZE', 10))
