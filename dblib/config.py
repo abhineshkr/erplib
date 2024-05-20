@@ -1,5 +1,6 @@
 # erplib/config.py
 from pydantic_settings import BaseSettings
+from pydantic import Extra
 
 class Settings(BaseSettings):
     PRIMARY_POSTGRES_DB: str
@@ -17,8 +18,7 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+        extra = Extra.ignore
 
 settings = Settings()
-
-# Print settings for debugging
 print(settings.dict())
