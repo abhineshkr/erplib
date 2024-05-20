@@ -16,9 +16,14 @@ class Settings(BaseSettings):
     POOL_RECYCLE: int
     POOL_PRE_PING: bool
 
+    HOST: str
+    PORT: int
+    PRIMARY_DB_URI: str
+
     class Config:
         env_file = ".env"
+        env_prefix = "ERPLIB_"
         extra = Extra.ignore
 
 settings = Settings()
-print(settings.dict())
+print("Loaded settings:", settings.dict())
