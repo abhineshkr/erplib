@@ -7,7 +7,7 @@ load_dotenv()
 class Settings:
     PRIMARY_POSTGRES_DB: str = os.getenv('PRIMARY_POSTGRES_DB', 'eppserp')
     PRIMARY_POSTGRES_USER: str = os.getenv('PRIMARY_POSTGRES_USER', 'postgres')
-    PRIMARY_POSTGRES_PASSWORD: str = os.getenv('PRIMARY_POSTGRES_PASSWORD', 'epps@123')
+    PRIMARY_POSTGRES_PASSWORD: str = os.getenv('PRIMARY_POSTGRES_PASSWORD', 'epps%40123')
     PRIMARY_POSTGRES_HOST: str = os.getenv('PRIMARY_POSTGRES_HOST', 'localhost')
     PRIMARY_POSTGRES_PORT: int = int(os.getenv('PRIMARY_POSTGRES_PORT', 5432))
 
