@@ -12,7 +12,3 @@ class CommonFieldsSchema(BaseModel):
     updator_role_code: Optional[int] = None
     terminal_id: Optional[str] = None
 
-class PaginationMetaSchema(BaseModel):
-    page: int
-    per_page: int
-    total_items: int
