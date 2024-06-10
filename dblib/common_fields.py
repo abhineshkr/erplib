@@ -2,7 +2,7 @@
 from sqlalchemy import Column, String, DateTime, SmallInteger, Text
 from .db_connection import Base  # Import Base from your connection module
 
-class CommonFields(Base):
+class common_field(Base):
     __abstract__ = True
     company_code = Column('comp_cd', SmallInteger, primary_key=True, nullable=False)
     created_by = Column('created_by', Text, nullable=True)
