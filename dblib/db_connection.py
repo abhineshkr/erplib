@@ -14,7 +14,8 @@ engine = create_engine(
     DATABASE_URL,
     poolclass=QueuePool,
     pool_size=settings.ERPLIB_POOL_MIN_SIZE,
-    pool_max_overflow=settings.ERPLIB_POOL_MAX_OVERFLOW,
+    # pool_max_overflow=settings.ERPLIB_POOL_MAX_OVERFLOW,
+    max_overflow=settings.ERPLIB_POOL_MAX_OVERFLOW,
     pool_timeout=settings.ERPLIB_POOL_IDLE_TIMEOUT,
     pool_recycle=settings.ERPLIB_POOL_RECYCLE,
     pool_pre_ping=settings.ERPLIB_POOL_PRE_PING
