@@ -20,7 +20,7 @@ engine = create_engine(
     pool_pre_ping=settings.ERPLIB_POOL_PRE_PING
 )
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=True, autoflush=True, bind=engine)
 Base = declarative_base()
 
 def get_db():
